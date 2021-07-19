@@ -15,7 +15,11 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-
+  
+{{ if .Params.asciinema }}
+    <script src="{{ .Site.BaseURL }}js/asciinema-player.js"></script>
+{{ end }}
+  
   <body data-url="{{ .RelPermalink }}"
 
   class="
